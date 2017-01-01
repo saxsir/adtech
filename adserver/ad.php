@@ -7,12 +7,12 @@ $data = array(
 $json = json_encode($data);
 
 $script = <<<EOS
-(function(json){
+;(function(json){
   var ad = document.createElement('div');
   ad.innerHTML = json.ad;
 
   // 複数タグ貼る場合はこれだとだめだなぁ...
-  var me = document.getElementById(adserver-tag);
+  var me = document.getElementById("adserver-tag");
   me.parentNode.appendChild(ad);
 })($json);
 EOS
